@@ -1,6 +1,6 @@
 package com.mycompany.pokemon;
 
-public class Pikachu extends Pokemon implements TElectrico {
+public class Pikachu extends Pokemon  {
 
     public Pikachu(String nombrePersonalizado) {
         super(nombrePersonalizado);   
@@ -14,25 +14,10 @@ public class Pikachu extends Pokemon implements TElectrico {
         //NOMBRE POR DEFECTO
         if (this.mote==null) {
             this.mote=this.nombre;
-        }
-        this.vidaBase= random.nextInt(35,46);    
+        }       
+        //LA VIDABASE SE GENERA RANDOM SEGUN EL RANGO ESPECIFICO DE CADA POKEMON
+        this.vidaBase= random.nextInt(35,46);
         this.vida=calcularVida();
         this.vidaActual=calcularVida();
     }
-
-    @Override
-    public void Impactrueno(Pokemon p) {
-    }
-
-    @Override
-    public void PunioTrueno(Pokemon p) {
-    }
-
-    @Override
-    public void Rayo(Pokemon p) {
-    }
-
-    @Override
-    public void RayoCarga(Pokemon p) {
-    } 
 }

@@ -1,6 +1,6 @@
 package com.mycompany.pokemon;
 
-public class Bulbasaur extends Pokemon implements TPlanta {
+public class Bulbasaur extends Pokemon {
 
     public Bulbasaur(String nombrePersonalizado) {
         super(nombrePersonalizado);
@@ -17,21 +17,4 @@ public class Bulbasaur extends Pokemon implements TPlanta {
         this.vida=calcularVida();
         this.vidaActual=calcularVida();
     }
-
-    @Override
-    public void Paralizar(Pokemon p) {
-    }
-
-    @Override
-    public void Drenaje(Pokemon p) {
-    }
-
-    @Override
-    public void HojaAfilada(Pokemon p) {
-    }
-
-    @Override
-    public void LatigoCepa(Pokemon p) {
-    }
-
 }

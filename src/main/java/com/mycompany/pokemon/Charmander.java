@@ -1,6 +1,6 @@
 package com.mycompany.pokemon;
 
-public class Charmander extends Pokemon implements TFuego {
+public class Charmander extends Pokemon {
 
       public Charmander(String nombrePersonalizado) {
         super(nombrePersonalizado);
@@ -17,21 +17,4 @@ public class Charmander extends Pokemon implements TFuego {
         this.vida=calcularVida();
         this.vidaActual=calcularVida();
     }
-
-    @Override
-    public void PunioFuego(Pokemon p) {
-    }
-
-    @Override
-    public void Ascuas(Pokemon p) {
-    }
-
-    @Override
-    public void Lanzallamas(Pokemon p) {
-    }
-
-    @Override
-    public void RuedaFuego(Pokemon p) {
-    }
-    
 }

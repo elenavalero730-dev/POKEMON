@@ -12,6 +12,15 @@ public class JuegoPokemon {
         int opcion = 0;
         //INT PARA CONTAR CUANTOS POKEMON TENGO EN MI EQUIPO  ------------------
         int tamanioEquipo = 0;
+        //STRING PARA ASIGNAR EL NOMBRE DEL RIVAL  -----------------------------
+        String nombreRival="";
+        while (nombreRival.isBlank() || nombreRival.isEmpty()) {
+            System.out.println("\n+--------------------------------------+");
+            System.out.println("|        COMO SE LLAMA TU RIVAL?       |");
+            System.out.println("+--------------------------------------+\n");
+            nombreRival = sc.nextLine();
+        }
+
         //STRING PARA ASIGNAR MOTE AL POKEMON  ---------------------------------
         String nombrePersonalizado = null;
         //CREO UN OBJETO RANDOM PARA MULTIPLES USOS  ---------------------------
@@ -82,10 +91,10 @@ public class JuegoPokemon {
                             "\n|      ESTADISTICAS DE TU EQUIPO       |" +
                             "\n+--------------------------------------+");
         
-        //IMPRIME MI EQUIPO
+        //IMPRIME MI EQUIPO ----------------------------------------------------
         imprimirEquipoEstadisticas(miEquipo);
 
-        //  ELIGE EQUIPO RIVAL ALEATORIAMENTE
+        //  ELIGE EQUIPO RIVAL ALEATORIAMENTE ----------------------------------
         for (int i = 0 ; i < equipoRival.length ; i++) {
             //en el randm1.nextInt SI INCLUYE el primer valor, pero NO INCLUYE
             //el segundo, por lo que le tenemos que dar uno más para que pueda tener pikachu
@@ -102,7 +111,7 @@ public class JuegoPokemon {
                             "\n|    ESTADISTICAS DEL EQUIPO RIVAL     |" +
                             "\n+--------------------------------------+");
         
-        //IMPRIME EQUIPO RIVAL con un for-each
+        //IMPRIME EQUIPO RIVAL con un for-each ---------------------------------
         imprimirEquipoEstadisticas(equipoRival);
         
     }

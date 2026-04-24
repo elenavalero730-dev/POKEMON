@@ -35,9 +35,14 @@ public abstract class Pokemon {
 
     //   METODO CALCULAR VIDA USANDO VIDABASE Y NIVEL   ------------------------
     protected int calcularVida() {
-         
+         //CALCULA LA VIDA SEGUN LA VIDA BASE (GENERADA RANDOM ENTRE CIERTOS
+         //VALORES SEGUN EL POKEMON) Y EL NIVEL QUE ESTE TIENE.
         return (((2 * this.vidaBase * this.nivel) / 100) + this.nivel + 10);
     }
+    
+    /*public int recibirDanio(){  
+    return 0;
+    }*/
     
     protected void setVidaActual(){
     this.vidaActual=this.vida;
@@ -147,19 +152,24 @@ public abstract class Pokemon {
     }
 
 //   ATAQUES BASICOS   ---------------------------------------------------------
-    public void Placaje(Pokemon p) {
-        //int danio = 0;
-        System.out.println(this.nombre + " ha usado Placaje " + p.getNombre());
-
+    //ESTOS ATAQUES HE DE CAMBIARLOS A LA FUTURA BDD DE MOVIMIENTOS
+    public int Placaje(Pokemon p) {
+        int danio = 0;
+        //System.out.println(this.nombre + " ha usado Placaje " + p.getNombre());
+        return danio;
     }
 
-    public void Araniazo(Pokemon p) {
-        System.out.println(this.nombre + " ha usado Arañazo " + p.getNombre());
+    public int Araniazo(Pokemon p) {
+        int danio=0;
+        //System.out.println(this.nombre + " ha usado Arañazo " + p.getNombre());
+        return danio;
     }
 
-    public void Mordisco(Pokemon p) {
-        System.out.println(this.nombre + " ha usado Mordisco " + p.getNombre());
-        System.out.println(p.getNombre() + "ha recibido (xdaño). Tiene +(p.getVida)+ puntos de vida) ");
+    public int Mordisco(Pokemon p) {
+        int danio=17;
+        //System.out.println(this.nombre + " ha usado Mordisco " + p.getNombre());
+        //System.out.println(p.getNombre() + "ha recibido (xdaño). Tiene +(p.getVida)+ puntos de vida) ");
+        return danio;
     }
 
     //   ToString   ------------------------------------------------------------
